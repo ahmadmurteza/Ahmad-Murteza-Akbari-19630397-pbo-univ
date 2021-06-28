@@ -13,8 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+    
                     {{ __('You are logged in!') }}
+
+                    <a href="{{ Route('makul') }}" class="btn btn-sm btn-primary float-right">Tabel Makul</a>
                 </div>
             </div>
         </div>
