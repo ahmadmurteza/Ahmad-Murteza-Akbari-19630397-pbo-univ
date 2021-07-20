@@ -3,9 +3,13 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+            <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpreview.pixlr.com%2Fimages%2F800wm%2F1195%2F1%2F11951163953.jpg&imgrefurl=https%3A%2F%2Fpixlr.com%2Fid%2Fstock%2Fdetails%2F11951163953-shopping-cart-online-payment-bank-card-security-ve%2F&tbnid=oA1O4dY0fuxHNM&vet=12ahUKEwj02L_0oL_xAhUW1XMBHW-DB9MQMyhdegUIARCtAQ..i&docid=CU_CtYL_cy07KM&w=800&h=800&itg=1&q=security%20vector&safe=strict&ved=2ahUKEwj02L_0oL_xAhUW1XMBHW-DB9MQMyhdegUIARCtAQ" class="img-fluid" alt="...">
+            </div>
+        </div>
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
