@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 28, 2021 at 07:20 PM
+-- Generation Time: Jul 21, 2021 at 03:55 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -54,6 +54,14 @@ CREATE TABLE `mahasiswa` (
   `alamat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `mahasiswa`
+--
+
+INSERT INTO `mahasiswa` (`id`, `user_id`, `npm`, `tempat_lahir`, `tanggal_lahir`, `gender`, `telepon`, `alamat`) VALUES
+(2, 1, 78979879, 'Banjabaru', '2021-07-19', 'L', 1231115516, 'Martapura'),
+(3, 2, 12341234, 'asdasd', '2021-06-30', 'L', 123123312, 'asdasdasdasd');
+
 -- --------------------------------------------------------
 
 --
@@ -73,7 +81,8 @@ CREATE TABLE `makul` (
 
 INSERT INTO `makul` (`id`, `kd_makul`, `nama_makul`, `sks`) VALUES
 (1, 'MKL001', 'PEMROGRAMAN BERORIENTASI OBJEK', 3),
-(2, 'MKL002', 'PEMROGRAMANA WEB', 4);
+(2, 'MKL002', 'PEMROGRAMANA WEB', 4),
+(6, 'MKL003', 'ASDASD', 2);
 
 -- --------------------------------------------------------
 
@@ -109,6 +118,14 @@ CREATE TABLE `nilai` (
   `nilai` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `nilai`
+--
+
+INSERT INTO `nilai` (`id`, `makul_id`, `mahasiswa_id`, `nilai`) VALUES
+(1, 1, 2, 80),
+(2, 2, 3, 70);
+
 -- --------------------------------------------------------
 
 --
@@ -143,7 +160,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'murteza', 'ahmadmurtezaakbari@gmail.com', NULL, '$2y$10$8q1bu9DW7CAFKElEkOpif.twL8m7fG65wa7Hgikbzwpc0r4i1RuMK', NULL, '2021-06-17 03:25:44', '2021-06-17 03:25:44');
+(1, 'murteza', 'ahmadmurtezaakbari@gmail.com', NULL, '$2y$10$8q1bu9DW7CAFKElEkOpif.twL8m7fG65wa7Hgikbzwpc0r4i1RuMK', NULL, '2021-06-17 03:25:44', '2021-06-17 03:25:44'),
+(2, 'asdasd', 'a@g', NULL, '$2y$10$jfGj1NBcgMiZZgemimzSf.J3y7QDvU0d3kPi9vY1QIokZype9fgha', NULL, '2021-07-20 08:20:46', '2021-07-20 08:20:46'),
+(3, 'aasd', 'a@a', NULL, '$2y$10$1ItRYEW/YzUbrY6hTn/QjeiFHDfZkbazBTj9D7GEoA3mHrcCVOm9.', NULL, '2021-07-21 05:31:41', '2021-07-21 05:31:41');
 
 --
 -- Indexes for dumped tables
@@ -207,13 +226,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `makul`
 --
 ALTER TABLE `makul`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -225,13 +244,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

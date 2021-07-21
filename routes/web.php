@@ -37,5 +37,14 @@ Route::get('mahasiswa-create', "App\Http\Controllers\MahasiswaController@create"
 Route::post('mahasiswa-simpan', "App\Http\Controllers\MahasiswaController@store")->name('simpan.mahasiswa');   
 
 Route::get('mahasiswa-edit/{id}', "App\Http\Controllers\MahasiswaController@edit")->name('edit.mahasiswa');    
-
+Route::post('mahasiswa-update/{id}', "App\Http\Controllers\MahasiswaController@update")->name('update.mahasiswa'); 
 Route::get('mahasiswa-delete/{id}', "App\Http\Controllers\MahasiswaController@destroy")->name('hapus.mahasiswa');
+
+// Route Nilai
+Route::get('nilai', "App\Http\Controllers\NilaiController@index")->name('nilai');
+Route::get('nilai-create', "App\Http\Controllers\NilaiController@create")->name('tambah.nilai');
+Route::post('nilai-simpan', "App\Http\Controllers\NilaiController@store")->name('simpan.nilai');   
+
+Route::get('nilai-edit/{id}', "App\Http\Controllers\NilaiController@edit")->name('edit.nilai');    
+Route::post('nilai-update/{id}', "App\Http\Controllers\NilaiController@update")->name('update.nilai'); 
+Route::get('nilai-delete/{id}', "App\Http\Controllers\NilaiController@destroy")->name('hapus.nilai');

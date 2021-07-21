@@ -31,25 +31,26 @@ class MahasiswaController extends Controller
     public function edit($id)
     {
         // dd($request->all());
-        $makul = Makul::find($id);
-        return view("makul.edit", compact('makul'));
+        $user = User::all();
+        $mahasiswa = Mahasiswa::find($id);
+        return view("mahasiswa.edit", compact('mahasiswa', 'user'));
     }
 
     public function update(Request $request, $id)
     {
         // dd($request->all());
-        $makul = Makul::find($id);
-        $makul->update($request->all());
+        $mahasiswa = Mahasiswa::find($id);
+        $mahasiswa->update($request->all());
         toast('Data Berhasil Diperbaharui','success');
-        return redirect()->route('makul');
+        return redirect()->route('mahasiswa');
     }
 
     public function destroy($id)
     {
         // dd($request->all());
-        $makul = Makul::find($id);
-        $makul->delete();
+        $mahasiswa = Mahasiswa::find($id);
+        $mahasiswa->delete();
         toast('Data Berhasil Dihapus','warning');
-        return redirect()->route('makul');
+        return redirect()->route('mahasiswa');
     }
 }
